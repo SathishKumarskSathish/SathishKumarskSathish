@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            padding:10px;
+            width: 100%;
+        }
+           input{ 
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 10px;
+            background: white;
+            color:orange;
+
+        }
+        
+        
+    </style> 
+</head>
+<body>
+    <h2 id="dis"></h2>
+    <h1 class="abc">cm to inch converter</h1>
+    <div style="border:2px solid red; height:100px; width: 200px; align-items: cener; border-radius: 20px;">
+        <input type="number" name="len"  id="len" placeholder="enter the centmeter">
+        <button id="sub" onclick="convert()">sub</button>
+        <div id="inch" style="padding:10px;color:white; background:black"></div>
+    </div>
+    <!-- celcius to fahrenheit -->
+     <!-- formula Faharenheit=celcius*9/5+32 -->
+     <h1>celcius to faharenheit</h1>
+     <div style="border:2px solid orange; border-radius: 20px;text-align;center; background: black; width: 200px;">
+        <input type="number" name="" id="cel" placeholder="enter the celcius"><br>
+        <button onclick="faharan()">submit</button>
+        <div id="far" style="color:white; padding:50px; width: 50px;"></div>
+     </div>
+    <script>
+        function convert(){
+        let val=Number(document.getElementById("len").value);
+        let inch=val/2.54;
+        let res=document.getElementById("inch");
+        res.innerHTML=inch.toFixed(2) +"inches";
+    }
+    function faharan(){
+        let cel=Number(document.getElementById("cel").value);
+        let faharan=cel*9/5+32;
+        let res=document.getElementById("far");
+        res.innerHTML=faharan.toFixed(2)+"faharenheit";
+
+
+    }
+
+
+        // console.log(val);
+        // len.innerHTML="78";
+        // console.log(len);
+        // console.log("nanthan theriudha");
+        let a=54;
+        console.log(a);
+        a="dfdhfj";
+        console.log(a);
+        a=4e2;
+        console.log(a);
+        // variable types var let const 
+        //const mean constant variable it can't changable
+        // let changable variable type
+        // *********************opterators*************
+
+        // Arithemetic opterator + - * / % ** ++ --
+        // Assignment operator   = += -+ *= /= **=
+        // logical operator && || !
+        // betwise operator & | << >> >>>
+        // comparision  operator < > <= >=  === != !=== 
+
+        // user enter input  is  *************** prompt();***********
+        // let input=Number(prompt("how many ticket you wont   :"));
+        // console.log("total ",input*340);
+        let ip=document.getElementById("dis");
+        ip.innerHTML="welcome my web page";
+        let ip1=document.getElementsByClassName("abc");
+       // ip1.innerHTML("vangana vanakamuna");
+       //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Math object<<<<<<<<<<<<<<<<<<
+            /*  Math.floor(7.5);
+7
+Math.ceil(5.67);         just round the number
+6
+Math.ceil(4.56);
+5
+Math.round(4.567);       just roud the number
+5
+Math.sqrt(4);           square root value
+2
+Math.abs(-67);          absolute value netgative  to possitive
+67
+Math.pow(5,2);           power (value , power)
+25
+Math.min(89,54,33,24);    finding minimum value of the area
+24
+Math.random();           generate the random value of 0.12232..
+0.5716712649125466
+Math.random();
+0.41469983159945634    
+Math.floor(Math.random()*6)+2;
+7
+Math.floor(Math.random()*6)+1;
+5
+Math.floor(Math.random()*100);
+88
+Math.floor(Math.random()*100)+1;        generating  1to 100 numbers randomly
+62
+Math.E;
+2.718281828459045
+Math.E;                       not changable value
+2.718281828459045
+Math.PI;
+3.141592653589793            not changeable value and its not use ()
+
+*/
+// *****************************STRING********************
+// STRING is a group of characters 
+let n="good morning ";
+let n1="good afternoon";
+console.log(n.concat("everyone","have a nice day"));
+console.log(n);
+console.log(n.concat("  ",n1));
+// part by part separate process 3 process
+        // slice(start,end);
+        // substring(start,end);
+        // substr(start,lenght);
+console.log(n1.substr(1,12));
+console.log(n.slice(0,10));
+console.log(n.slice(5));
+console.log(n1.substr(-4));
+console.log(n.substr(2,10));
+console.log(n.substring(-1,-10));
+console.log(n.replace("morning","afternoon"));
+console.log(n);
+// let s="good turning point in your life";
+// undefined
+// console.log(s);
+// VM850:1 good turning point in your life
+// undefined
+//                      uppercase method
+// s.toUpperCase();
+// 'GOOD TURNING POINT IN YOUR LIFE'
+// n1.slice(1,5);
+// 'ood '
+// n1.trimEnd();               remove the space for end
+// 'good afternoon'
+// n1.trimLeft();              remove the space for left
+// 'good afternoon'
+// n1.trimStart();             remove the space for starting                
+// 'good afternoon'
+n1.slice(1,5);
+'ood '
+n1.trimEnd();
+'good afternoon'
+n1.trimLeft();
+'good afternoon'
+n1.trimEnd();
+'good afternoon'
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

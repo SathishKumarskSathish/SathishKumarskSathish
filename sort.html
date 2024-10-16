@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort the array</title>
+    <style>
+        *{
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding: auto;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="color" name="" id=""><br>
+        <input type="date" name="" id=""><br>
+        <input type="datetime-local" name="" id=""><br>
+        <input type="image" src="" alt=""><br>
+        <input type="file" name=""  title="upload the resume " id="" placeholder="upload the resume"><br>
+        <input type="datetime-local" name="" id=""><br>
+        <input type="hidden" name="" style="background-color: red;"><br>
+        <input type="week" name="" id=""><br>
+        <input type="url" name="" id=""><br>
+        <input type="tel" name="" id=""><br>
+        <input type="search" name="" id=""><br>
+        <input type="reset" value=""><br>
+        <input type="radio" name="" id=""><br>
+        <input type="button" value=""><br>
+        <button > submit</button>
+
+
+    </form>
+
+    <script>
+        let v1=[55,22,77,33,1,7,4,64,99,65,4];
+        console.log(v1);  //[55, 22, 77, 33, 1, 7, 4, 64, 99, 65, 4]
+        let v2=v1.sort((a,b)=>{
+            return a-b;
+        })
+        console.log(v2);//  1, 4, 4, 7, 22, 33, 55, 64, 65, 77, 99]
+        //ascending order of array
+
+        let v3=v1.sort((a,b)=>{
+            
+            return b-a;
+        })
+        console.log(v3);//[99, 77, 65, 64, 55, 33, 22, 7, 4, 4, 1]
+        
+        
+
+    
+    </script>
+</body>
+</html>

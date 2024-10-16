@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <h1 >Dom- document Object Model</h1>
+
+    
+    <p>
+        Object {} that represents the page  you see in the web browser and provides you with an API to interact with it.
+        Web browser constructs the MOM when it loads an HTML document, and structures all the elements in a tree - like representation. 
+        javascript can access the DOM to dynamically change the content, structure, and style of a web page.
+    </p>
+    <button onclick="alert('this is click event')">clkck</button>
+    <h1>element selectors</h1>
+
+    <p>method  used to target and manipulate HTML elements they allow you to select one or multiple HTML elements from the DOM.</p>
+<!--  
+1.   document.getElementById()   // element or null
+//2. document.getElementsByClassName() //HTML collection
+//3. document.getElementByTagName() // HTML collection
+//4.  document.querySelector()  //Element or null
+//5. document.querySelectoraAll()  //nodelist -->
+
+<h1 id="heading">hi</h1>
+<div class="color">black</div>
+<div class="color">white</div>
+<div class="color">orange</div>
+
+
+
+    <script>
+        document.write("this is document object model");
+        document.title="welcome to the great girikalan magic show";// to change the title
+        console.dir(document);
+        document.body.style.backgroundColor="pink";//to change the color
+        const val="welcome to my page";
+        const val1=document.getElementById("demo");
+        val1.textContent+=val===" "? "guest": val;
+        console.log(val1);
+
+        //  id
+        
+        const heading=document.getElementById("heading");
+
+
+        heading.style.color="red";
+        heading.style.textAlign="center";
+
+//  ClassName
+        // const col = document.getElementByClassName("color");
+
+        const col = document.getElementsByClassName("color")
+
+        col[0].style.backgroundColor="red";
+        col[1].style.backgroundColor= " orange ";
+        // for(let fr of col){
+        //     fr.style.backgroundColor="yellow";
+        // }
+
+    // tagName
+    var  head=document.getElementsByTagName("h1");
+    head[0].style.backgroundColor="orange";
+
+    // querySelector
+        const quer=document.querySelector("p");
+        quer.style.backgroundColor="yellow";
+    //querySelectorAll
+
+    // const c=document.querySelectorAll(".color");
+
+    const c = document.querySelectorAll(".color")
+    c[0].style.backgroundColor="white";
+    console.log(c);
+
+ 
+
+    </script>
+</body>
+</html>

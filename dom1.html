@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <div class="con">
+        <h1> this is heading</h1>
+        <p id="p1"></p>
+        <button id="btn1" onclick="click()">click</button>
+    </div>
+
+    <div class="con">
+        <h1> this is heading</h1>
+        <p id="p1" name="abc">this is  para1</p>
+    </div>
+    <script>
+       
+        let p1=document.getElementById("p1");
+        console.log(p1);
+        p1.innerHTML="welcome to para";// its selected element
+        p1.innerText="hello guys"  //its selected only text content modify
+         p2=document.getElementsByTagName("h1");
+        console.log(p2);
+        p2[0].style.color="white";
+          
+          
+
+        function click(){
+            //let pop=alert("hello word");
+          //  let b=document.querySelector(".con");
+        //   b.innerHTML=pop;
+        // document.querySelector(".con");
+        let c=document.getElementById("p1");
+              c.style.background="red";
+
+
+
+        }
+        
+        let containor=document.getElementsByClassName("con");
+        containor[1].style.background ="blue";
+        containor[0].style.background ="black"
+        containor[0].style.color ="red";
+        containor[1].style.color ="white";
+
+
+
+
+    </script>
+
+    <!-- <script>
+        let p=document.getElementById("p1");
+        console.log(p);
+        let p1=document.getElementsByClassName(".con");
+        console.log(p1);
+        let p2=document.getElementsByTagName("p");
+        let p3=document.querySelector("p");
+        console.log(p3);
+        p3.style.background="orange";
+
+        let p4=document.querySelectorAll(".con");
+          p3.style.border="2px solid blue";
+
+        //console.log(p1.innerText);
+        p1.innerHTML="hello world";
+        // console.log(p1);
+        p3.innerText="hello hi  this is inner html";
+       // p3.innerHTML="hi";
+    </script> -->
+</body>
+</html>
+<style>
+.con{
+    border:2px solid red;
+    margin:10px;
+}
+</style>

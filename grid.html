@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0px;
+            padding:0px;
+
+        }
+
+        .con{
+            background: orangered;
+            display: grid;
+            /* display the column  you have to specify the column how many you wount*/
+            /* grid-template-columns: 30% 30% 30%;  to display the 3 set colume   */  
+            /* grid-template-columns: 1fr 1fr 1fr;   1frame 3 fraction  for equal */
+            /* grid-template-columns:1fr 2fr 1fr ;   only center extra spce */
+            /* grid-template-columns: 200px 200px auto; */
+            /* grid-template-columns: repeat( 3,1fr);  to display short form 3 fr */
+            /* grid-template-columns: minmax(200px,1f),1fr,1fr; */
+                /* grid-template-columns: repeat(auto-fit,minmax(200px 1fr), 2fr, 1fr); */
+
+
+
+            /* column-gap: 10px; */
+            /* row-gap: 10px; */
+            gap:20px;
+            
+        justify-content: center;
+        align-items: center;
+            
+
+        }
+        /* auto-fit   fit means how much space it having thats covered
+        /* auto-fill   it means cover only */
+        
+        .con>.box{
+            /* height: 200px; */
+            height: 200px;
+            width: 200px;
+            padding: 16px;
+            color:white;
+            background-color: black;
+            margin:1px;
+            display:grid;
+
+        }
+        .con1{
+            background: green;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            
+
+
+
+
+        }
+
+        .child{
+            background:black;
+            color:red;
+            height: 10px;
+            width: 30px;
+            /* display: grid; */
+            /* gap:10px; */
+            /* justify-content: center; */
+            /* align-items: center; */
+
+
+
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ex?</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ex?</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ex?</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ex?</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ex?</p>
+        </div>
+    </div>
+
+    <div class="con1">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div>
+    
+</body>
+</html>

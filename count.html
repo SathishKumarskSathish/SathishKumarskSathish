@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="" id="countLbl">0</label><br>
+    <div id="count_containor">
+    <button id="increase_btn" class="btn">increase</button>
+    <button id="decrease_btn" class="btn">decrease</button>
+    <button id="reset_btn" class="btn">reset</button>
+</div>
+
+    <script src="count.js"></script>
+</body>
+</html>
+<style>
+    #countLbl{
+        display: block;
+        text-align: center;
+        font-size: 20em;
+        font-family:Helvetica;
+
+    }
+    #count_containor{
+        text-align: center;
+    }
+    .btn{
+        padding:10px 20px;
+        font-size:1.5em;
+        color:red;
+        border-radius: 5px;
+        background: black;
+        cursor: pointer;
+        transition: background-color 0.25s;
+
+    }
+    .btn:hover{
+        background:black;
+        opacity: 0.5;
+    }
+
+</style>

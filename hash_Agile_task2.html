@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        // a) Variable for collection name based on your name
+        // b) Variable for collection name based on the last four digits of your phone number
+        // c) Create a collection for the name-based collection
+        // d) Create a collection for the phone-based collection
+        // e) Get the employee count from the name-based collection
+        // f) Index the 'Department' column in the name-based collection
+        // g) Index the 'Gender' column in the phone-based collection
+        
+// h) Get the employee count again after indexing in the name-based collection
+// i) Delete employee by ID 'E02003' in the name-based collection
+
+// j) Get the employee count again after deletion in the name-based collection
+
+// k) Search for employees in the name-based collection by 'Department' = 'IT'
+
+// l) Search for employees in the name-based collection by 'Gender' = 'Male'
+
+// m) Search for employees in the phone-based collection by 'Department' = 'IT'
+
+// n) Get the department facet in the name-based collection
+
+// o) Get the department facet in the phone-based collection
+
+
+
+
+    </p>
+    <script>
+
+
+var v_nameCollection = 'Hash_JohnDoe';  
+var v_phoneCollection = 'Hash_1234'; 
+createCollection(v_nameCollection);
+createCollection(v_phoneCollection);
+var empCount1 = getEmpCount(v_nameCollection);
+console.log(`Employee count in ${v_nameCollection}:, empCount1`);
+
+indexData(v_nameCollection, 'Department');
+
+indexData(v_phoneCollection, 'Gender');
+var empCount2 = getEmpCount(v_nameCollection);
+console.log(`Employee count in ${v_nameCollection} after indexing:`, empCount2);
+delEmpById(v_nameCollection, 'E02003');
+
+var empCount3 = getEmpCount(v_nameCollection);
+console.log(`Employee count in ${v_nameCollection} after deletion:`, empCount3);
+var itDeptEmployees = searchByColumn(v_nameCollection, 'Department', 'IT');
+console.log(`Employees in IT department of ${v_nameCollection}:`, itDeptEmployees);
+
+var maleEmployees = searchByColumn(v_nameCollection, 'Gender', 'Male');
+console.log(`Male employees in ${v_nameCollection}:`, maleEmployees);
+var itDeptEmployeesPhone = searchByColumn(v_phoneCollection, 'Department', 'IT');
+console.log(`Employees in IT department of ${v_phoneCollection}:`, itDeptEmployeesPhone);
+var depFacetNameCollection = getDepFacet(v_nameCollection);
+console.log(`Department facet for ${v_nameCollection}:`, depFacetNameCollection);
+var depFacetPhoneCollection = getDepFacet(v_phoneCollection);
+console.log(`Department facet for ${v_phoneCollection}:`, depFacetPhoneCollection);
+    </script>
+</body>
+</html>

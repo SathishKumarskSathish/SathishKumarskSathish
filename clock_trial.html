@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        .con{
+            height: 200px;
+            width:  500px;
+            justify-content: center;
+            align-items: center;
+            background:black;
+            color:red;
+            display: flex;
+            font-size: 5em;
+            border-radius: 30px;
+          /* /  gap:30px; */
+            margin:28%;
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div id="box">
+            <span id="hours">00</span>
+            <span >:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+            <span id="ampm">am</span>
+            <!-- <span id="year"> </span> -->
+        </div>
+    </div>
+    <script>
+        let dateTime=new Date();
+       console.log(dateTime);//Mon Sep 30 2024 19:58:49
+       console.log(dateTime.getDate);//30
+
+
+       function displayTime(){
+        let date=new Date();
+        let hr=addZero(date.getHours());
+        let min= addZero(date.getMinutes());
+        let sec=addZero(date.getSeconds());
+        let ampm=document.getElementById("ampm");
+        if(hr>12){
+            hr=hr-12;
+            ampm.innerHTML="PM";
+        }
+        else{
+            ampm.innerHTML="AM";
+        }
+        // let a=dateTime.getHour;
+        document.getElementById("hours").innerHTML=hr;
+        document.getElementById("min").innerHTML=min;
+        document.getElementById("sec").innerHTML=sec;
+        let yr=date.getFullYear();
+       // document.getElementById("year").innerHTML=yr;
+        //console.log(year);  // 2024
+
+       // document.getElementById("")
+
+       function addZero(num){
+        return num<10?"0"+num:num;
+       }
+
+        
+        
+
+       }
+       setInterval(displayTime,500);// every sec call the time function
+
+    </script>
+</body>
+</html>
